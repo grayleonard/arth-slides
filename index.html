@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+  <title>
+    slides ^___^
+  </title>
+  <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+</head>
+<body>
+  <nav class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
+      <ul class="nav navbar-nav">
+        <li class="active" id="create_nav"><a href="#"> Add </a> </li>
+        <li><a href="#" id="test_nav"> Test </a> </li>
+        <li><a href="#" id="settings_nav"> Settings </a> </li>
+      </ul>
+    </div>
+  </nav>
+  <div id="create" style="display:block">
+    <form id="create_form" onsubmit="return false">
+      Artist: <input type="text" name="artist"><br />
+      Title: <input type="text" name="title"><br />
+      Year: <input type="text" name="year"><br />
+      URL: <input type="text" name="url"><br />
+      <input type="submit" Value="Create">
+    </form>
+  </div>
+  <div id="settings" style="text-align:center; display:none">
+    <div id="main">
+      <h1>Settings</h1>
+      <form id="settings_form" onsubmit="return false">
+        Slide Mode: <select name="mode">
+          <option>linear</option>
+          <option>random</option>
+        </select><br />
+        Database: <input type="text" name="database"><br />
+        <input type="submit" value="Save" name="submit" onclick="">
+      </form>
+    </div>
+  </div>
+  <div id="test" style="display:none">
+    <div id="image" style="position:relative; float:left;"><div id="image_overlay" style="position:absolute"><a href="#" id="image_delete" style="background-color:black; color:white;">Delete</a></div><a href="#"><img id="slide_image" src="" width="500px"></a></div>
+    <div class="well" id="text-container" onMouseOver="view.show('text')" onMouseOut="view.hide('text')">
+      Show
+      <div id="text">	</div>
+    </div>
+  </div>
+  <script src="db.js"></script>
+  <script src="view.js"></script>
+  <script src="controller.js"></script>
+</body>
+</html>
